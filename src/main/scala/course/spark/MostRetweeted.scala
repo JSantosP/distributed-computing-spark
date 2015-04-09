@@ -36,7 +36,7 @@ object MostRetweeted extends App {
    * This is called an RDD transformation.
    * In transformations, RDD elements are not evaluated yet.
    */
-  val tweets: RDD[Tweet] = 
+  val tweets: RDD[Tweet] =
     lines.map(Tweet.apply) //equals to 'lines.map(s => Tweet.apply(s))'
 
   /*
@@ -57,10 +57,10 @@ object MostRetweeted extends App {
   /*
    * So we could get max retweeted value with a reduce function (RDD action).
    */
-  val mostRetweeted: Tweet = 
-    tweets.reduce((t1: Tweet,t2: Tweet) => 
+  val mostRetweeted: Tweet =
+    tweets.reduce((t1: Tweet, t2: Tweet) =>
       if (t1.retweets > t2.retweets) t1 else t2)
-    
+
   println(s"Most retweeted : $mostRetweeted")
 
   /*
