@@ -9,3 +9,7 @@ First example is a simple snippet used for guess the most retweeted tweet of a b
 ## Sample2: Most retweeted (with SparkSQL)
 
 Same example as before, but using SparkSQL syntax...
+
+## How to run
+
+```sbt run```
